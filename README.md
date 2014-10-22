@@ -11,8 +11,10 @@ Here's how to do it:
   _mock_ group; this can be done with the commands (which must be run
   as root):
   
-      % sudo /usr/sbin/useradd USERNAME
-      % sudo usermod -a -G mock USERNAME
+  ```
+  % sudo /usr/sbin/useradd USERNAME
+  % sudo usermod -a -G mock USERNAME
+  ```
       
 * NOTE: everything else in these instructions should be done using
   your account on the server, not the root account.  NEVER build an
@@ -24,7 +26,7 @@ Here's how to do it:
 * Run the command:
 
   ```
-      rpmbuild --define "_topdir $HOME/nemac-gdal-rpmbuild" --define "_smp_mflags -j8" -bb $HOME/nemac-gdal-rpmbuild/SPECS/nemac-gdal.spec
+  rpmbuild --define "_topdir $HOME/nemac-gdal-rpmbuild" --define "_smp_mflags -j8" -bb $HOME/nemac-gdal-rpmbuild/SPECS/nemac-gdal.spec
   ```
 
   Note: the `-define "_smp_mflags -j8"` part of the above command says
@@ -43,7 +45,7 @@ Here's how to do it:
     
 * Copy these RPMs to NEMAC's yum repository using the following commands:    
 
-```
-      scp $HOME/nemac-gdal-rpmbuild/RPMS/x86_64/*.rpm dev.nemac.org:/var/dev.nemac.org/html/yum-repo/x86_64/RPMS
-      ssh dev.nemac.org /var/dev.nemac.org/html/yum-repo/updaterepos
-```
+  ```
+  scp $HOME/nemac-gdal-rpmbuild/RPMS/x86_64/*.rpm dev.nemac.org:/var/dev.nemac.org/html/yum-repo/x86_64/RPMS
+  ssh dev.nemac.org /var/dev.nemac.org/html/yum-repo/updaterepos
+  ```
