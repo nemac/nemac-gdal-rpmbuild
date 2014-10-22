@@ -20,4 +20,7 @@ Here's how to do it:
   
 * Run the command:
 
+```
       rpmbuild --define '_topdir ~/nemac-gdal-rpmbuild' --define '_smp_mflags -j8' -bb ~/nemac-gdal-rpmbuild/SPECS/nemac-gdal.spec
+```
+
