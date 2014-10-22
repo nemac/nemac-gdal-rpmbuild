@@ -1,6 +1,6 @@
 Name:           nemac-gdal
 Version:        1.11.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        NEMAC's custom build of GDAL
 
 Group:          Applications/Engineering
@@ -46,8 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-, root, root, 0755)
 %{_bindir}/*
-#%{_datadir}/gdal/
-%{_datadir}/
+%{_datadir}/gdal/
 %{_libdir}/libgdal.so.*
 
 
