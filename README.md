@@ -23,9 +23,9 @@ Here's how to do it:
   
 * Run the command:
 
-```
+  ```
       rpmbuild --define "_topdir $HOME/nemac-gdal-rpmbuild" --define "_smp_mflags -j8" -bb $HOME/nemac-gdal-rpmbuild/SPECS/nemac-gdal.spec
-```
+  ```
 
   Note: the `-define "_smp_mflags -j8"` part of the above command says
   to use up to 8 processes in parallel when compiling the source code;
