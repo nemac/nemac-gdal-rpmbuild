@@ -74,7 +74,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %{_includedir}/*.h
 %exclude %{_libdir}/libgdal.so.*
 %exclude %{_libdir}/*.la
-%{_libdir}
+%{_libdir}/*
 
 %files python
 %defattr(-, root, root, 0755)
