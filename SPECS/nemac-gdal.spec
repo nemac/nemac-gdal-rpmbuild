@@ -5,7 +5,7 @@
 
 Name:           nemac-gdal
 Version:        1.11.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        NEMAC's custom build of GDAL
 
 Group:          Applications/Engineering
